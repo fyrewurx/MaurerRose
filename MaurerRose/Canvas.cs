@@ -54,7 +54,7 @@ namespace MaurerRose
 
             _animationTimer.Interval = 1000;
             _animationTimer.Tick += _animationTimer_Tick;
-            //_animationTimer.Start();
+            _animationTimer.Start();
         }
 
         /// <summary>
