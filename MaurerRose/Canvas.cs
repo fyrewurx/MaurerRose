@@ -46,6 +46,9 @@ namespace MaurerRose
         private double n = 3;
         private double d = 47;
 
+        /// <summary>
+        /// Class constructor
+        /// </summary>
         public Canvas()
         {
             InitializeComponent();
@@ -62,6 +65,11 @@ namespace MaurerRose
         /// </summary>
         private int _sizeFactor = 1;
 
+        /// <summary>
+        /// Animation timer tick event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void _animationTimer_Tick(object sender, EventArgs e)
         {
             n += _rnd.NextDouble();
@@ -69,6 +77,10 @@ namespace MaurerRose
             this.Invalidate();
         }
 
+        /// <summary>
+        /// Paints the board
+        /// </summary>
+        /// <param name="e">PaintEventArgs</param>
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
@@ -118,6 +130,10 @@ namespace MaurerRose
             e.Graphics.DrawLines(_penSin, _points.ToArray());
         }
 
+        /// <summary>
+        /// OnResize event to recalculate size factor
+        /// </summary>
+        /// <param name="e"></param>
         protected override void OnResize(EventArgs e)
         {
             base.OnResize(e);
